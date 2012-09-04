@@ -31,8 +31,8 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 10. You also need to set a limit of how many posts you want to display, type in a number in this field. 
 11. To get the plugin to display on your selected page you can either:
 			a - use the shortcode on the page in the admin dashobard which is [quicksand]
-			b - open the template php file and add <?php echo do_shortcode('[quicksand]'); ?>
-			c - open the template php file and run the function <?php if (function_exists('quicksand')) {	quicksand(); } ?>
+			b - open the template php file and add echo do_shortcode('[quicksand]'); 
+			c - open the template php file and run the function  if (function_exists('quicksand')) {	quicksand(); } 
 
 12 .You are free to edit the plugin code to your own needs, just remember if you update it, it will over ride your changes. 
 
