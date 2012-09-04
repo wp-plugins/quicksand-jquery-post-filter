@@ -6,7 +6,7 @@ Donate link: http://www.developingtheweb.co.uk
 Tags: quicksand, jquery filter, category filter, post filter
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable tag: 1.1
+Stable Tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,8 +14,7 @@ Filter posts by their categories using the Quicksand jQuery filter plugin on any
 
 == Description ==
 
-Filter posts by their categories using the Quicksand jQuery filter plugin on any page. You can select the categories you want to use in the admin area and limit the amount of posts to show. 
-This plugin shows the thumbnail of the post if one has beens set as well as a linked post title.
+Filter posts by their categories using the Quicksand jQuery filter plugin on any page. You can select the categories you want to use in the admin area and limit the amount of posts to show. This plugin shows the thumbnail of the post if one has beens set as well as a linked post title.
 
 
 == Installation ==
