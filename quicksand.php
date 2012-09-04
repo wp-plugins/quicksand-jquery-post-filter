@@ -49,7 +49,7 @@ return $quicksand_result;
 <ul id="filterOptions">
     <li><a href="#" class="all">All</a></li>   
     <?php foreach ($quicksand_categories as $catID) {
-		if ($catID < 0) { break;  } else { $filter_category = get_cat_name($catID); }
+		if ($catID < 0) {break;  } else { $filter_category = get_cat_name($catID); }
 		?>
     <li><a href="#" class="<?php echo $filter_category; ?>"><?php echo $filter_category; ?></a></li>
  <?php } ?>   
@@ -66,20 +66,15 @@ $limit = get_option('post_limit');
  $myposts = get_posts( $args );
  foreach( $myposts as $post ) : setup_postdata($post);
         $categories = get_the_category();
-        $count=0;
-         if ($categories) {
-             foreach($categories as $category) {
-             $count++;
-             if (1 == $count) {
-               $category = $category->cat_name;
-            }
-         }
-     }
+
+        $category = $categories[0]->cat_name;
+
 ?>
 <li class="item" data-id="id-<?php the_ID() ?>" data-type="<?php echo $category; ?>">
 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(100,100)) ;?><br />
 <?php  the_title();?></a></li>
-<?php wp_reset_query(); endforeach; ?>
+<?php  endforeach; 
+wp_reset_query(); ?>
 </ul>
 
 <?php  
