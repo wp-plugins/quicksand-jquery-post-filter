@@ -16,7 +16,7 @@ Filter posts by their categories using the Quicksand jQuery filter plugin on any
 
 Filter posts by their categories using the Quicksand jQuery filter plugin on any page. You can select the categories you want to use in the admin area and limit the amount of posts to show. This plugin shows the thumbnail of the post if one has beens set as well as a linked post title.
 
-Demo at ht
+Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 
 == Installation ==
 
