@@ -40,8 +40,5 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 == Changelog ==
 
 
-= 1.1 =
+= 1 =
 
-	- Removed list style from Firefox.
-	- Fixed Jquery noconflict issue.
-	- Used Wordpress native version of jQuery instead of Googles repository.
