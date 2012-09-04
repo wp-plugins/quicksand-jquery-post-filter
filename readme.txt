@@ -1,4 +1,4 @@
-== Quicksand Post Filter jQuery Plugin ==
+=== Quicksand Post Filter jQuery Plugin ===
 
 
 Contributors: developingtheweb
