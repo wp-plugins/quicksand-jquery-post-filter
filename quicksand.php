@@ -10,10 +10,8 @@ Author URI: http://www.developingtheweb.co.uk
 
   function quicksandfiles() {	 
 	  
- $include_jquery = get_option('include_jquery');
-	 if ($include_jquery['value'] == 't') {
     wp_enqueue_script( 'jquery' );
-	} 
+
     wp_register_script( 'main', plugins_url('quicksand/js/main.js', dirname(__FILE__)));
     wp_enqueue_script( 'main' );
 	

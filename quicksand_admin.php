@@ -16,13 +16,9 @@
         $quicksand_category5 = $_POST['quicksand_category5'];  
         update_option('quicksand_category5', $quicksand_category5); 
 		
-		$include_jquery = $_POST['include_jquery'];
-		update_option('include_jquery', $include_jquery); 
-		
 		$post_limit = $_POST['post_limit'];
 		update_option('post_limit', $post_limit);
 		
-		if ($include_jquery['value'] == 't') { $jquery_text = 'and Jquery has been included' ;}
 
         ?>  
         <div class="updated"><p><strong><?php _e('Options saved ' . $jquery_text ); ?></strong></p></div>  
@@ -57,7 +53,6 @@
         <p><?php _e("Category 3: " ); wp_dropdown_categories('show_option_none=Empty&name=quicksand_category3&id=quicksand_category3&selected=' . $quicksand_category3);?></p> 
         <p><?php _e("Category 4: " ); wp_dropdown_categories('show_option_none=Empty&name=quicksand_category4&id=quicksand_category4&selected=' . $quicksand_category4);?></p> 
         <p><?php _e("Category 5: " ); wp_dropdown_categories('show_option_none=Empty&name=quicksand_category5&id=quicksand_category5&selected=' . $quicksand_category5);?></p>  
-        <p><?php _e("Include Jquery? " ); ?> <input type="checkbox" name="include_jquery" value="true" <?php echo $checked ?>/></p> 
         <p><?php _e("Post Limit: " ); ?> <input type="text" name="post_limit" value="<?php echo $post_limit; ?>" /> </p> 
 
 		<hr />     
