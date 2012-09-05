@@ -6,7 +6,7 @@ Donate link: http://www.developingtheweb.co.uk
 Tags: quicksand, jquery filter, category filter, post filter
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable Tag: 1.2
+Stable Tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -39,6 +39,9 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 
 == Changelog ==
 
+= 1.3=
+
+	1. Plugin includes naming error has been fixed as the name from local to development was changed to suit wordpress repo, unlikely that any of the previous versions have worked up until this fix.
 
 = 1.2 =
 

@@ -12,16 +12,16 @@ Author URI: http://www.developingtheweb.co.uk
 	  
     wp_enqueue_script( 'jquery' );
 
-    wp_register_script( 'main', plugins_url('quicksand/js/main.js', dirname(__FILE__)));
+    wp_register_script( 'main', plugins_url('quicksand-jquery-post-filter/js/main.js', dirname(__FILE__)));
     wp_enqueue_script( 'main' );
 	
-	wp_register_script( 'quicksand', plugins_url('quicksand/js/jquery.quicksand.js', dirname(__FILE__)));
+	wp_register_script( 'quicksand', plugins_url('quicksand-jquery-post-filter/js/jquery.quicksand.js', dirname(__FILE__)));
     wp_enqueue_script( 'quicksand' );
 	
-	wp_register_script( 'easing', plugins_url('quicksand/js/jquery.easing.1.3.js', dirname(__FILE__)));
+	wp_register_script( 'easing', plugins_url('quicksand-jquery-post-filter/js/jquery.easing.1.3.js', dirname(__FILE__)));
     wp_enqueue_script( 'easing' );
 	
-	wp_register_style('layout', plugins_url('quicksand/css/layout.css', dirname(__FILE__)));
+	wp_register_style('layout', plugins_url('quicksand-jquery-post-filter/css/layout.css', dirname(__FILE__)));
 	wp_enqueue_style('layout');	
 	?>  
  
