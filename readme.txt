@@ -39,9 +39,9 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 
 == Changelog ==
 
-= 1.3=
+= 1.3 =
 
-	1. Plugin includes naming error has been fixed as the name from local to development was changed to suit wordpress repo, unlikely that any of the previous versions have worked up until this fix.
+ 1. Plugin includes naming error has been fixed as the name from local to development was changed to suit wordpress repo, unlikely that any of the previous versions have worked up until this fix.
 
 = 1.2 =
 
