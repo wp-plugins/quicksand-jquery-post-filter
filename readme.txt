@@ -39,6 +39,10 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 
 == Changelog ==
 
+= 1.5 =
+
+	1. Some category numbers caused the posts to dissapear when all 5 input categories where chosen. Error has been fixed with ghost empty category.
+
 = 1.4 =
 
 	1. Some versions of jQuery had issues with selecting the filter categories by category name, this was changed to use category id's instead.
