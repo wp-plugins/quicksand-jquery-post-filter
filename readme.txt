@@ -6,7 +6,7 @@ Donate link: http://www.developingtheweb.co.uk
 Tags: quicksand, jquery filter, category filter, post filter
 Requires at least: 3.0
 Tested up to: 3.4.1
-Stable Tag: 1.3
+Stable Tag: 1.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,10 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 
 
 == Changelog ==
+
+= 1.4 =
+
+	1. Some versions of jQuery had issues with selecting the filter categories by category name, this was changed to use category id's instead.
 
 = 1.3 =
 

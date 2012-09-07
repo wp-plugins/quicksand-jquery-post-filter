@@ -31,6 +31,7 @@ jQuery(document).ready(function() {
 		else {
 			// find all li elements that have our required jQueryfilterType
 			// values for the data-type element
+			
 			var jQueryfilteredData = jQuerydata.find('li[data-type=' + jQueryfilterType + ']');
 		}
 		

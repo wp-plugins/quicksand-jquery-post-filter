@@ -21,7 +21,7 @@
 		
 
         ?>  
-        <div class="updated"><p><strong><?php _e('Options saved ' . $jquery_text ); ?></strong></p></div>  
+        <div class="updated"><p><strong><?php _e('Options saved '); ?></strong></p></div>  
    
 <?php   
    
@@ -33,10 +33,8 @@
 	   $quicksand_category3 = get_option('quicksand_category3');	  
 	   $quicksand_category4 = get_option('quicksand_category4');	   
 	   $quicksand_category5 = get_option('quicksand_category5');
-	   $include_jquery = get_option('include_jquery');
 	   $post_limit = get_option('post_limit');
 	   
-	    if ($include_jquery['value'] == 't' || $_POST['include_jquery'] == 'true' ) { $checked = 'checked="true"'; } else { $checked = ''; }
 	   
     }  
 ?>

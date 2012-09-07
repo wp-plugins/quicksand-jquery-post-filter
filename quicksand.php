@@ -4,7 +4,7 @@ Plugin Name: Quicksand
 Plugin URI: http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 Description: Use the Jquery Quicksand to filter posts by categories.
 Author: Mark Stockton
-Version: 1.3
+Version: 1.4
 Author URI: http://www.developingtheweb.co.uk
 */
 
@@ -30,10 +30,7 @@ add_action('wp_enqueue_scripts', 'quicksandfiles');
 
   function quicksand()
   {
-static $quicksand_result;
 
-if ($quicksand_result !== NULL)
-return $quicksand_result;
 	  
 	   $quicksand_category1 = get_option('quicksand_category1');
        $quicksand_category2 = get_option('quicksand_category2');
@@ -49,7 +46,7 @@ return $quicksand_result;
     <?php foreach ($quicksand_categories as $catID) {
 		if ($catID < 0) {break;  } else { $filter_category = get_cat_name($catID); }
 		?>
-    <li><a href="#" class="<?php echo $filter_category; ?>"><?php echo $filter_category; ?></a></li>
+    <li><a href="#" class="<?php echo $catID; ?>"><?php echo $filter_category; ?></a></li>
  <?php } ?>   
 </ul>  
   
@@ -65,7 +62,7 @@ $limit = get_option('post_limit');
  foreach( $myposts as $post ) : setup_postdata($post);
         $categories = get_the_category();
 
-        $category = $categories[0]->cat_name;
+        $category = $categories[0]->term_id;
 
 ?>
 <li class="item" data-id="id-<?php the_ID() ?>" data-type="<?php echo $category; ?>">
@@ -76,8 +73,7 @@ wp_reset_query(); ?>
 </ul>
 
 <?php  
-$quicksand_result = TRUE;
-return $quicksand_result; 
+
  
   }  
 // set admin menu link and include admin page 
