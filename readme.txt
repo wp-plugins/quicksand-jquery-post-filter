@@ -36,6 +36,8 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 
 12 .You are free to edit the plugin code to your own needs, just remember if you update it, it will over ride your changes. 
 
+Please Note: That if your posts are contained in more than one category the filter will choose the posts first category to filter with.
+
 
 == Changelog ==
 
