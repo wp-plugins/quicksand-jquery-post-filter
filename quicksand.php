@@ -90,18 +90,29 @@ foreach ($categories as $c) {
 if (in_array( $c['id'], $quicksand_categories)) { ?>     
       
 <li id="item" class="item" data-id="id-<?php the_ID() ?>" data-type="<?php foreach ($categories as $c) { echo $c['id'] . ' ';}?>" >
-<a href="<?php the_permalink(); ?>">
  <?php 
     if (get_option('featured') == 'yes') {
+ ?>
+    <a href="<?php the_permalink(); ?>">
+ <?php       
  the_post_thumbnail(array(100,100));
+ ?></a>
+    <?php
     }?>
     <br />
+    
 <?php
 
     if(get_option('titles') == 'yes') {
+        ?>
+    <a href="<?php the_permalink(); ?>">
+<?php        
     the_title();
+    ?>
+    </a>
+    <?php
     }
- ?></a></li>
+ ?></li>
 <?php
     }
 }
