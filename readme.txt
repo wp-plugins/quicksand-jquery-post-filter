@@ -5,8 +5,8 @@ Contributors: developingtheweb
 Donate link: http://www.developingtheweb.co.uk
 Tags: quicksand, jquery filter, category filter, post filter
 Requires at least: 3.0
-Tested up to: 3.4.2
-Stable Tag: 1.6
+Tested up to: 3.4.1
+Stable Tag: 1.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,13 +36,8 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 
 12 .You are free to edit the plugin code to your own needs, just remember if you update it, it will over ride your changes. 
 
-Please Note: That if your posts are contained in more than one category the filter will choose the posts first category to filter with.
 
 == Changelog ==
-
-= 1.6=
-
-	1. 'All' filter option now does not contain all the post categories but only the posts from selected filter categories. Thanks to Sparksight for bringing this to my attention.
 
 = 1.5 =
 

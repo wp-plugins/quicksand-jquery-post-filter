@@ -4,7 +4,7 @@ Plugin Name: Quicksand
 Plugin URI: http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 Description: Use the Jquery Quicksand to filter posts by categories.
 Author: Mark Stockton
-Version: 1.6
+Version: 1.5
 Author URI: http://www.developingtheweb.co.uk
 */
 
@@ -56,8 +56,9 @@ add_action('wp_enqueue_scripts', 'quicksandfiles');
 
 $limit = get_option('post_limit');
 
+
  global $post;
- $args = array('numberposts' => $limit, 'category' => "'" . $quicksand_category1 . ',' . $quicksand_category2 . ',' . $quicksand_category3 . ',' . $quicksand_category4 . ',' . $quicksand_category5 . ',' . $quicksand_end . "'");
+ $args = array('numberposts' => $limit, 'category' => $quicksand_category1, 'category' => $quicksand_category2, 'category' => $quicksand_category3, 'category' => $quicksand_category4, 'category' => $quicksand_category5, 'category' => $quicksand_end);
  $myposts = get_posts( $args );
  foreach( $myposts as $post ) : setup_postdata($post);
         $categories = get_the_category();
