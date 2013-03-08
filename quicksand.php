@@ -4,7 +4,7 @@ Plugin Name: Quicksand
 Plugin URI: http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 Description: Use the Jquery Quicksand to filter posts by categories.
 Author: Mark Stockton
-Version: 1.7
+Version: 1.7.1
 Author URI: http://www.developingtheweb.co.uk
 */
 
