@@ -6,7 +6,7 @@ Donate link: http://www.developingtheweb.co.uk
 Tags: quicksand, jquery filter, category filter, post filter
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable Tag: 1.7.1
+Stable Tag: 1.7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -40,7 +40,11 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 
 == Changelog ==
 
-= 1.7.1
+= 1.7.2 =
+
+	1. Fixed Quicksand js error new from 1.7.1 changes, stops multiple category filters.
+
+= 1.7.1 =
 
 	1. Read me text update, removed note that mentions posts will only be attributed to one category.
 	2. Removed quicksand.js browser detection for older internet explorers. No longer supported by jQuery 1.9+
