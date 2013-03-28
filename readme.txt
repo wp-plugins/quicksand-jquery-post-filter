@@ -6,7 +6,7 @@ Donate link: http://www.developingtheweb.co.uk
 Tags: quicksand, jquery filter, category filter, post filter
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable Tag: 1.7.2
+Stable Tag: 2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,9 @@ Filter posts by their categories using the Quicksand jQuery filter plugin on any
 
 == Description ==
 
-Filter posts by their categories using the Quicksand jQuery filter plugin on any page. You can select the categories you want to use in the admin area and limit the amount of posts to show. This plugin shows the thumbnail of the post if one has beens set as well as a linked post title.
+Filter posts by their categories using the Quicksand jQuery filter plugin on any page. 
+You can select the categories you want to use in the admin area, choose to show post thumbs or titles.
+Works will with other jQuery effects such as Overlays and Lightboxes (not included in this plugin).
 
 Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 
@@ -26,7 +28,7 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 5. This plugin works best with the latest Wordpress updates and HTML 5 Doc Type.
 6. Make sure you have posts and categories set up in the post admin area.
 7. Navigate to the QuicksandFilter menu option.
-8. The plugin will show category drop down boxes based on the amount of categories you have, any drop down box that has a value of none will not be shown as a filter option. 
+8. Click on the add new filter to add a post category to filter posts by,
 9. Select whether to show category descriptions or not.
 10. Select whether to show the list all posts tab/filter option.
 11. Select whether the posts should display the featured image or not.
@@ -36,9 +38,15 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 			b - open the template php file and add echo do_shortcode('[quicksand]'); 
 			c - open the template php file and run the function  if (function_exists('quicksand')) {	quicksand(); } 
 
-14 .You are free to edit the plugin code to your own needs, just remember if you update it, it will over ride your changes. 
+14. Style this plugin using your themes css file. Base css selectors can be easily overridden.
 
 == Changelog ==
+
+= 2 =
+
+    1. Total rewrite of the plugin.
+    2. Now includes an easier to use admin area
+    3. Duplicate post bug fix
 
 = 1.7.2 =
 

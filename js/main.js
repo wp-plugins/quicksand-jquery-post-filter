@@ -39,10 +39,7 @@ jQuery(document).ready(function() {
 			// find all li elements that have our required jQueryfilterType
 			// values for the data-type element
 
-                              var jQueryfilteredData = jQuerydata.find('li[data-type~=' + jQueryfilterType + ']');
-
-                       
-			
+                              var jQueryfilteredData = jQuerydata.find('li[data-type~=' + jQueryfilterType + ']');                       			
 		}
 		
 		// call quicksand and assign transition parameters
