@@ -46,7 +46,7 @@
     function quicksand_form_reader() {  
 
         $postVariables = array();
-
+        
         foreach ($_POST as $key => $value) {
             $optionArray = array ('name' => $key, 'value' => $value); 
             if ($key == 'Submit') {
@@ -57,8 +57,6 @@
         }
 
         //Run Update on Post Array
-
-
 
         foreach ($postVariables as $runOption) {
             
@@ -97,7 +95,7 @@
                      var i = largest + 1;
                      
                         jQuery('#addCategory').live('click', function() {
-                                jQuery('<p id="' + i + '"><label for="category"><select id="quicksand_category' + i +  '" name="quicksand_category' + i +'"><?php foreach ($categorySelect as $c) { echo '<option value="' . $c->cat_ID . '"' .  '>' . $c->cat_name . '</option>'; }?><option value="Empty">Empty</option></select></label> <a href="#" id="remove">Remove</a></p>').appendTo(quicksandDiv);
+                                jQuery('<p id="' + i + '"><label for="category"><select id="quicksand_category' + i +  '" name="quicksand_category' + i +'"><?php foreach ($categorySelect as $c) { echo '<option value="' . $c->cat_ID . '"' .  '>' . $c->cat_name . '</option>'; }?><option value="Empty">Empty</option></select></label> </p>').appendTo(quicksandDiv);
                                 i++;
                                 return false;
                         });
@@ -119,10 +117,11 @@
   
     // Get Current Added Categories
               foreach ($all_options as $name => $key) {
-                            $shortname = substr_replace($name, "", -1);
+                           $shortname = mb_substr($name, 0, 18);
                             if ($shortname == "quicksand_category") {    
                                 ?>
-        <p id="<?php echo substr($name, -1); ?>"><label for="category">
+        <p id="<?php echo substr($name, -1); ?>">
+            <label for="category">
                 <select id="<?php echo $name;?>" name="<?php echo $name;?>">
                      <?php foreach ($categorySelect as $c) { 
                             echo '<option value="' . $c->cat_ID . '"';
@@ -135,7 +134,7 @@
                 <option value="Empty">Empty</option>
                 </select>
             </label>
-            <a href="#" id="remove">Remove</a>
+<!--            <a href="#" id="remove">Remove</a>-->
         </p>
         
 <?php
@@ -174,14 +173,16 @@
         
         function quicksand() {  
           
- 	    $categoriesloop = get_categories();
-		$count = count($categoriesloop);	
+ 	   // $categoriesloop = get_categories();
+	//	$count = count($categoriesloop);
+                $count = 100;
 		for ($i = 1; $i <= $count; $i++) {
 
 			   $quicksand_categories[] = get_option('quicksand_category' . $i); 
 		}
-	   array_push($quicksand_categories, 0);
-	   
+	   array_push($quicksand_categories, 0);   
+
+           
 ?>
         <div class="options-container">
                 <ul id="filterOptions">
@@ -192,11 +193,11 @@
                     <?php } ?>
 
                         <?php foreach ($quicksand_categories as $catID) {
-                                if ($catID == 0) {break;  } else { $filter_category = get_cat_name($catID); }
+                                if ($catID == 0) { } else { $filter_category = get_cat_name($catID); 
                                 ?>
                     <li><a href="#" class="<?php echo $catID; ?>"><?php echo $filter_category; ?></a></li>
                     <?php $cat_descriptions[$catID] = category_description($catID); ?>
-                 <?php } ?>   
+                 <?php } } ?>   
                 </ul>
                 </div>
 
@@ -227,7 +228,7 @@
  ?>
                         <li id="item" class="item" data-id="id-<?php echo $item->ID ?>" data-type="<?php foreach ($categories as $c) { echo $c . ' ';}?>" >
                         <?php  if (get_option('featured') == 'yes') { ?>
-                           <a href="<?php get_permalink($item->ID); ?>">
+                           <a href="<?php echo get_permalink($item->ID); ?>">
                         <?php  echo get_the_post_thumbnail($item->ID,array(100,100));  ?></a>
                         <?php } ?>
                            <br />
@@ -238,7 +239,7 @@
                             <?php } ?>
                         </li>                                          
                     <?php  }  ?>
-             </ul>
+             </ul><?php echo get_option('quicksand_category9'); ?>
 <?php            
         }
         // Include shortcode call

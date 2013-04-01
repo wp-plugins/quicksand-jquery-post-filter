@@ -6,7 +6,7 @@ Donate link: http://www.developingtheweb.co.uk
 Tags: quicksand, jquery filter, category filter, post filter
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable Tag: 2
+Stable Tag: 2.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -33,6 +33,7 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 10. Select whether to show the list all posts tab/filter option.
 11. Select whether the posts should display the featured image or not.
 12. Select whether the posts should display the post title or not.
+13. To delete a filter select empty from the category options list.
 13. To get the plugin to display on your selected page you can either:
 			a - use the shortcode on the page in the admin dashobard which is [quicksand]
 			b - open the template php file and add echo do_shortcode('[quicksand]'); 
@@ -41,6 +42,10 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 14. Style this plugin using your themes css file. Base css selectors can be easily overridden.
 
 == Changelog ==
+
+= 2.1 =
+
+    1. Fixed several bugs which stopped updating of options when many filters where chosen.
 
 = 2 =
 
