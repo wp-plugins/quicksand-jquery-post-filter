@@ -29,10 +29,22 @@
             
         ?>
         <div class="options-selector">
-                <p><?php _e("Category Descriptions: ");?> <input type="checkbox" name="descriptions" value="yes" <?php if ($descriptions == 'yes') { echo 'checked="checked"'; } else {};?> /> </p>
-                <p><?php _e("List All Tab?:"); ?> <input type="checkbox" name="listall" value="yes" <?php if ($listall == 'yes') { echo 'checked="checked"';} else {} ?> /> </p>
-                <p><?php _e("Use Post Featured Image:"); ?> <input type="checkbox" name="featured" value="yes" <?php if ($featured == 'yes') { echo 'checked="checked"';} else {} ?> /> </p>
-                <p><?php _e("Show Post Titles:"); ?> <input type="checkbox" name="titles" value="yes" <?php if ($titles== 'yes') { echo 'checked="checked"';} else {} ?>/> </p>   
+                <p>
+                    <input type="hidden" name="descriptions" value="no"/>
+                    <?php _e("Category Descriptions: ");?> <input type="checkbox" name="descriptions" value="yes" <?php if ($descriptions == 'yes') { echo 'checked="checked"'; } else {};?> />
+                </p>
+                <p>
+                    <input type="hidden" name="listall" value="no"/>
+                    <?php _e("List All Tab?:"); ?> <input type="checkbox" name="listall" value="yes" <?php if ($listall == 'yes') { echo 'checked="checked"';} else {} ?> />
+                </p>
+                <p>
+                    <input type="hidden" name="featured" value="no"/>
+                    <?php _e("Use Post Featured Image:"); ?> <input type="checkbox" name="featured" value="yes" <?php if ($featured == 'yes') { echo 'checked="checked"';} else {} ?> />
+                </p>
+                <p>
+                    <input type="hidden" name="titles" value="no"/>
+                    <?php _e("Show Post Titles:"); ?> <input type="checkbox" name="titles" value="yes" <?php if ($titles== 'yes') { echo 'checked="checked"';} else {} ?>/>
+                </p>   
         </div>
         <p class="submit">  
             <input type="submit" class="quicksand-submit" name="Submit" value="<?php _e('Update Options', 'quicksand_trdom' ) ?>" />  
