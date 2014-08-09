@@ -14,9 +14,9 @@ ul#filterOptions {
         height: auto;
         
 }
-ul#filterOptions li { height: 52px; margin-right: 2px; display: inline-block; }
+ul#filterOptions li { height:auto; margin-right: 2px; display: inline-block; }
 ul#filterOptions li a {
-	height: 50px;
+	height:auto;
 	padding: 0 20px;
 	color: #000;
 	font-weight: bold;
@@ -42,6 +42,10 @@ ul.ourHolder li.item {
 	display:inline-block;
 	text-align: center;
 	overflow: hidden;
+}
+ul.ourholder li.item img {
+       width:100%;
+       height:auto;
 }
 ul.ourHolder li.item h3 { margin-top: 10px; font-size: 14px; line-height: 20px; }
 /*- -*/

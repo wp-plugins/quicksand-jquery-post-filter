@@ -5,8 +5,8 @@ Contributors: developingtheweb
 Donate link: http://www.developingtheweb.co.uk
 Tags: quicksand, jquery filter, category filter, post filter
 Requires at least: 3.0
-Tested up to: 3.5.1
-Stable Tag: 2.1
+Tested up to: 3.9.2
+Stable Tag: 3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -18,7 +18,7 @@ Filter posts by their categories using the Quicksand jQuery filter plugin on any
 You can select the categories you want to use in the admin area, choose to show post thumbs or titles.
 Works will with other jQuery effects such as Overlays and Lightboxes (not included in this plugin).
 
-Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
+Demo at http://www.wpjqueryfilter.co.uk
 
 == Installation ==
 
@@ -34,14 +34,24 @@ Demo at http://www.developingtheweb.co.uk/plugins/quicksand-wordpress-plugin/
 11. Select whether the posts should display the featured image or not.
 12. Select whether the posts should display the post title or not.
 13. To delete a filter select empty from the category options list.
-13. To get the plugin to display on your selected page you can either:
+14. Set image sizes to override plugin defaults. These can also be overridden in custom css files.
+15. To get the plugin to display on your selected page you can either:
 			a - use the shortcode on the page in the admin dashobard which is [quicksand]
 			b - open the template php file and add echo do_shortcode('[quicksand]'); 
 			c - open the template php file and run the function  if (function_exists('quicksand')) {	quicksand(); } 
 
-14. Style this plugin using your themes css file. Base css selectors can be easily overridden.
+16. Style this plugin using your themes css file. Base css selectors can be easily overridden.
 
 == Changelog ==
+
+= 3 = 
+
+    1. Updated for new wordpress version 3.9.2
+    2. Rewritten to enable bolt ons and additions from 3rd parties
+    3. Added image size choice option
+    4. Added order alphabetically option
+    5. Redesigned admin area
+    6.
 
 = 2.1 =
 
