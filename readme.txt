@@ -18,7 +18,7 @@ Filter posts by their categories using the Quicksand jQuery filter plugin on any
 You can select the categories you want to use in the admin area, choose to show post thumbs or titles.
 Works will with other jQuery effects such as Overlays and Lightboxes (not included in this plugin).
 
-Demo at http://www.wpjqueryfilter.co.uk
+Demo at http://www.developingtheweb.co.uk/quicksand-wordpress-plugin
 
 == Installation ==
 
