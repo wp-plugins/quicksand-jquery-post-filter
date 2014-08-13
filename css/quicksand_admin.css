@@ -76,3 +76,6 @@
         cursor:pointer;  
         color:#000!important;
 }
+.remove-link {
+    cursor: pointer;
+}

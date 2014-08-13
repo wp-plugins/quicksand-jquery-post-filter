@@ -234,6 +234,7 @@ class QuicksandView {
 											 jQuery("#remove<?php echo $name;?>").click(function() {
 												var name = "<?php echo $name;?>";
 												var cat = "p#<?php echo substr($name, -1);?>";
+												var removelink = "#remove<?php echo $name;?>";
 									
 												jQuery.ajax
 												({
@@ -246,6 +247,7 @@ class QuicksandView {
 													success: function(data){
 														jQuery(cat).remove();
 														jQuery('#message').html(data);
+														jQuery(removelink).remove();
 													}
 												});																								
 											});
@@ -264,7 +266,7 @@ class QuicksandView {
 												  ?>									 
 									  </select>
 								  </label>
-					              <div id="remove<?php echo $name;?>">Remove</div>
+					              <div class="remove-link" id="remove<?php echo $name;?>">Remove</div>
 							  </p>
 					  <?php
 												  } else {
