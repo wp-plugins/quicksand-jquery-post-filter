@@ -6,7 +6,7 @@ Donate link: http://www.developingtheweb.co.uk
 Tags: quicksand, jquery filter, category filter, post filter
 Requires at least: 3.0
 Tested up to: 3.9.2
-Stable Tag: 3.1
+Stable Tag: 3.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
