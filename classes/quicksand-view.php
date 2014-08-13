@@ -1,8 +1,19 @@
 <?php
 
-class QuicksandView{		
+class QuicksandView {
+	
+	public function deleteQuicksandCategory() {
+				global $wpdb;
+						// Function to delete quicksand category
+				$name = $_REQUEST['name'];
+				delete_option($name);	
+				$response = "Option Deleted";
+				header("Content-Type: application/json");
+				echo json_encode($response);		
+				exit();
+}
 	public function render() {
-		// What you counting here pal? Is this for the limit option? You should know you flipping wrote it. Seems to crash with large values
+		// Count crashes on large unlimited values
         $count = 100;
 		for ($i = 1; $i <= $count; $i++) {
 			   $quicksand_categories[] = get_option('quicksand_category' . $i); 
@@ -201,16 +212,12 @@ class QuicksandView{
 													  i++;
 													  return false;
 											  });
-
-											  jQuery('#remove').live('click', function() { 
-													  if( i > 2 ) {
-															  jQuery(this).parents('p').remove();
-															  i--;
-													  }
-													  return false;
-											  });
+											  
 									  });       
 							  </script>
+							  <div id="message">
+								  
+							  </div>
 									  <div id="add_categories">
 									  <p id="0">&nbsp</p>
 					  <?php   
@@ -222,11 +229,33 @@ class QuicksandView{
 												  if ($shortname == "quicksand_category") {    
 													$count++;
 												 ?>
+							  		      <script>
+										  jQuery(document).ready(function() {
+											 jQuery("#remove<?php echo $name;?>").click(function() {
+												var name = "<?php echo $name;?>";
+												var cat = "p#<?php echo substr($name, -1);?>";
+									
+												jQuery.ajax
+												({
+													type: 'POST',
+													url: ajaxurl,
+													dataType: 'json',
+													data: {
+														action : 'quicksanddelete',
+														name : name},
+													success: function(data){
+														jQuery(cat).remove();
+														jQuery('#message').html(data);
+													}
+												});																								
+											});
+										  });
+										  </script>		  
 							  <p id="<?php echo substr($name, -1); ?>">
 								  <label for="category">
 									  <select id="<?php echo $name;?>" name="<?php echo $name;?>">											
 										   <?php foreach ($categorySelect as $c) { 
-												  echo '<option value="' . $c->cat_ID . '"';
+											   echo '<option value="' . $c->cat_ID . '"';
 												  if ($key == $c->cat_ID) {
 														  echo ' selected';
 													  }
@@ -235,7 +264,7 @@ class QuicksandView{
 												  ?>									 
 									  </select>
 								  </label>
-					              <a href="#" id="remove<?php echo $count;?>">Remove</a>
+					              <div id="remove<?php echo $name;?>">Remove</div>
 							  </p>
 					  <?php
 												  } else {

@@ -8,8 +8,16 @@ class QuicksandAdmin {
 	 function __construct() {
 		// Wordpress Add Actions referencing functions/methods from this class		
 		add_action('admin_menu', array($this, 'quicksand_admin_actions'));
+		// Ajax Calls for Option Delete
+		add_action("wp_ajax_quicksanddelete", array($this,"quicksand_admin_ajax"));
+		add_action("wp_ajax_nopriv_quicksanddelete", array($this,"quicksand_admin_ajax"));		
 		// Add styles
 		add_action( 'admin_enqueue_scripts', array( $this, 'quicksand_admin_style' ) );		
+	}
+	
+	public function quicksand_admin_ajax() {
+		$quicksandAdminView = new QuicksandView();
+		$quicksandAdminView->deleteQuicksandCategory();
 	}
 	
 	public function quicksand_admin_actions() {

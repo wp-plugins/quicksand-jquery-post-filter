@@ -20,7 +20,7 @@ class quicksand {
 		wp_enqueue_script( 'quicksand' );	
 		wp_enqueue_script( 'main' );		
 		wp_enqueue_style('layout');	
-	   } 		   	  
+	 }
 	 public function quicksandView() {
 		 // Render Frontend Quicksand HTML
 		 $quicksandView = new QuicksandView();
